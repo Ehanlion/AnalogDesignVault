@@ -1,0 +1,1 @@
+<%* await tp.user.equations_insert() %>
