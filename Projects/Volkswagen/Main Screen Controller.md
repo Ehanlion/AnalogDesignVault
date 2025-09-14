@@ -15,6 +15,18 @@ I had this idea that is the following. The basic idea is that I want to create a
 - Send position data emulating touch inputs to control mock inputs to the media system
 - Then we can make macros that input series of touch inputs to navigate the menus
 
+**I think there are a couple approaches:**
+1. We can intercept and send signals directly on the canbus
+	- Issue: we don't know if some signals are internal to the multimedia system
+	- Issue: we don't know what format data is sent in
+2. We can just use visual parsing and a grabber to get the screen data that is being displayed ~~and input touch commands are locations~~
+	- Issue: how do we input touch commands to the screen?
+	- Issue: How do we find buttons, know which screen we are on, and so on 
+
+**Warning about touchscreen inputs**
+
+> I did some reading, it is impossible to have a screen layer between multimedia screen and user that can emulate touch inputs. This does not exist and thus cannot be done. We have to do this programatically with injections OR hack directly into the canbus lines.
+
 **Some things I think we need:**
 - A way to intercept signals from the canbus
 - An arduino/rpi to control the system
