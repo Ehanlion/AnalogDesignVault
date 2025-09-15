@@ -1,4 +1,4 @@
-#car #arduino
+#car #arduino #project
 
 I had this idea that is the following. The basic idea is that I want to create a system that can macro the important menu functions on my Mk8 Golf R's multimedia system because right now, they are nested behind mutiple menu interactions. This makes it unsafe to perform hard commands
 
@@ -37,3 +37,21 @@ I had this idea that is the following. The basic idea is that I want to create a
 **Targeted list of macros**
 - Set traction control to fully off setting
 - Change drive menu screen in driver display (hard, controlled from steering wheel not media)
+
+# Project Documents
+
+## Problem Statement
+
+>The main goal with this project is to "hack" into the infotainment screen and system in the Mk8 Golf R. The reason is to potentially issue screen inputs OR direct system-level commands to perform menu options that are annoying to manually enter or are simply dangerous to enter while driving. 
+
+**Issues to address and solve**
+1. Discover and hack the communications between ECU and infotainment
+2. Discover and hack the internal communications between infotainment screen and infotainment controller
+3. Create protocols and commands to issue to the infotainment system to perform macros and nested menu commands
+4. Create a map of desired commands to create macros for
+
+## Marco List
+
+| Macro Name       | Function                                                      | Command Sequence                                                                                                                                                                               |
+| ---------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Traction Control | Set the car's traction control setting to full, sport, or off | Swipe down on top menu, traction menu, select choice, confirm if choosing off **OR** main screen, vehicle, external, swipe, brakes, traction control, select option, confirm if choosing off.  |
